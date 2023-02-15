@@ -1,0 +1,164 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #0c333d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  color: #fff;
+}
+
+/* Banner Styles */
+
+.banner {
+  margin-bottom: 2rem;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Blog Feed Styles */
+
+.blog-feed {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-feed h2 {
+  text-align: center;
+}
+
+.blog-feed article {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.blog-feed h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-info {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-info a {
+  color: #333;
+}
+
+.post-summary {
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Featured Posts Styles */
+
+.featured-posts {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featured-posts h2 {
+  text-align: center;
+}
+
+.featured-posts ul {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-posts article {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.featured-posts img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Categories Styles */
+
+.categories {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+.categories ul {
+  margin-top: 1rem;
+}
+
+.categories li {
+  margin-bottom: 0.5rem;
+}
+
+.categories a {
+  color: #333;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 0;
+}

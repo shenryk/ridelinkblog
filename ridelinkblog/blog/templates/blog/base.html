@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Add your CSS and JavaScript links here -->
+    <link rel = "stylesheet" href="{% static 'blog/main.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><img src="path/to/logo.png" alt="My Blog"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="banner">
+        <img src="path/to/banner-image.jpg" alt="Banner Image">
+      </section>
+      <section class="blog-feed">
+        <h2>Latest Posts</h2>
+        
+        <ul>
+            {% block content %} 
+
+            {% endblock %}
+          <!-- <li>
+            <article>
+              <h3><a href="#">Post Title</a></h3>
+              <p class="post-info">Posted by <a href="#">Author Name</a> on <time datetime="2023-02-14">February 14, 2023</time></p>
+              <p class="post-summary">A brief summary of the post.</p>
+              <a href="#" class="read-more">Read More</a>
+            </article>
+          </li> -->
+          <!-- Add more articles here -->
+        </ul>
+      </section>
+      <section class="featured-posts">
+        <h2>Featured Posts</h2>
+        <ul>
+          <li>
+            <article>
+              <img src="path/to/post-image.jpg" alt="Post Image">
+              <h3><a href="#">Post Title</a></h3>
+              <p class="post-summary">A brief summary of the post.</p>
+            </article>
+          </li>
+          <!-- Add more articles here -->
+        </ul>
+      </section>
+      <aside class="categories">
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
+          <!-- Add more categories here -->
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2023 Ridelink. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
