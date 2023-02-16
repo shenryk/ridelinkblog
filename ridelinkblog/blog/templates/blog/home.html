@@ -3,57 +3,35 @@
 {% block content %}
 <style>
     .home-container{
-        display: inline-flex;
+        display: flex;
+        ;
         /* grid-template-columns:2fr 1fr ; */
     }
 </style>
 
 <div class="home-container">
-    <div style="background-color: aliceblue; padding: 10px; border-radius: 20px; ">
+    <div style="background-color: aliceblue; padding: 10px; border-radius: 20px;  ">
+        
         {%for post in posts %}
-    
+            
         <h3>{{post.title}}</h3>
         <small>By: {{post.author}}</small>
         <small>created on {{post.date_posted}}</small>
         <hr>
         <p>{{ post.content }}</p> <br> 
-        <hr>
-        
-    {% endfor %}
-
+        {% endfor %}     
     </div>
 
     <div>
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;" style="padding-top: 120px;">
-            <a id="list-group" style="text-decoration: none;" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-              <!-- <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
-              <span class="fs-5 fw-semibold" id="gist-btn">Latest Stories</span>
-            </a>
-            <div class="list-group list-group-flush border-bottom scrollarea">
-              <a href="#" class="list-group-item list-group-item-action  lh-tight" aria-current="true">
-                <div class="d-flex w-100 align-items-center justify-content-between">
-                  <strong class="mb-1">Seriously, Stop Trying to Teach Toddlers How to Code...By Desphixs</strong>
-                  <small>Wed</small>
-                </div>
-                <div class="col-10 mb-1 small">AS A BABY nerd, I was obsessed with Hackers. The 1995 cult movie... </div>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                <div class="d-flex w-100 align-items-center justify-content-between">
-                  <strong class="mb-1">Its not a bug - It's a feature... by Desphixs</strong>
-                  <small class="text-muted">Tues</small>
-                </div>
-                <div class="col-10 mb-1 small">When it comes to coding, everything works like a miracle, let me use that word...hahaha</div>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                <div class="d-flex w-100 align-items-center justify-content-between">
-                  <strong class="mb-1">I wanted to be a great programmer but...by Desphixs</strong>
-                  <small class="text-muted">Mon</small>
-                </div>
-                <div class="col-10 mb-1 small">in my family trait, nobody knows anything about computers and i wanted to be the greatest computer scientist ever and...</div>
-              </a>
-
-            </div>
+      <div class="latest-stories">
+        <button>Latest Stories</button>
+        <div>
+            <h3>Teaching kidos how to code</h3>
+            <p>I am thinking of a solution to teach under privillaged kids how to code with out worry</p><br>
+            <span></span>
+            <small>Wednesday</small><strong>9:15 pm</strong>
         </div>
+      </div>  
     </div>
 
 
