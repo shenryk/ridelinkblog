@@ -1,52 +1,15 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<style>
-    .home-container{
-        display: flex;
-        grid-template-columns: 2fr 2fr;
-        /* grid-template-columns:2fr 1fr ; */
-    }
-</style>
-
-<div class="home-container">
-    <div>
-        
-        {%for post in posts %}
-            
-        <h3>{{post.title}}</h3>
-        <p>{{ post.content }}</p> <br> 
-        <small>By: {{post.author}}</small>
-        <small>posted on on {{post.date_posted}}</small>
-        <hr>
-        {% endfor %}     
-    </div>
-
-    <div>
-      <div class="latest-stories">
-        <button>Latest Stories</button>
-        <h3>Recent Activities</h3>
-        <hr>
-        {% for message in room_messages %}
-        <div>
-            <small>@{{message.user}} {{message.created|timesince}} </small>
-            <small>replied to "{{message.room}}"</small>
-
-            <p>{{message.body}}</p>
-            {% if request.user == message.user %}
-                <a href="{% url 'delete-message' message.id %}">Delete</a>
-            {% endif %}
-            <hr>
-        </div>
-
+    <h1>Posts</h1>
+    <ul>
+        {%for post in object_list %}
+            <li><a href ="{% url 'article-detail' post.pk %}">{{post.title}}<a/> - {{post.author}}  <a href="{% url 'update-post' post.pk %}"><small> (Edit) </small></a> <br/>
+                {{ post.date_posted }}</li>
         {% endfor %}
-      </div>  
-    </div>
-
-
-
-</div>
-
-    
+    </ul> 
 {% endblock content %}
+
+
     
+
