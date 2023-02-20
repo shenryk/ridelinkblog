@@ -5,9 +5,10 @@
 
 {% block content %}
     <h1>{{post.title}}</h1>
-    <small>By: {{post.author.first_name}} {{post.author.last_name}}  Posted on {{post.date_posted}}  <a href="{% url 'update-post' post.pk %}">(Edit)</a></small><br/>
+    <small>By: {{post.author.first_name}} {{post.author.last_name}}  Posted on {{post.date_posted}}  <a href="{% url 'update-post' post.pk %}">(Edit)</a>
+         <a href="{% url 'delete-post' post.pk %}"><small> (Delete) </small></a> </small><br/>
     <hr>
-    <p>{{post.content}}</p>
+    <p>{{post.content|safe}}</p>
 
     <br><br>
     <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>

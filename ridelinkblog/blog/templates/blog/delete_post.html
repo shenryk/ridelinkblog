@@ -1,18 +1,17 @@
 {% extends 'blog/base.html' %}
 {% block title %}
-    Edit Blog Post
+    Delete Blog Post
 {% endblock title %}
 
 {% block content %}
-    <h1>Update blog post</h1>
+    <h1>Delete Post..</h1><br/>
+    <h3>Delete: {{ post.title }}</h3>
     <br>
     <br>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
-            {{ form.media }}
-            {{ form.as_p }}
-            <button class="btn btn-success">Update</button>
+            <strong>Are you sure ?</strong><br/><br/> <button class="btn btn-danger">Delete</button>
         </form>
     </div>
    
