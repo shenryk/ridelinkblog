@@ -4,6 +4,8 @@
 {% endblock title %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
     <h1>Add post...</h1>
     <br>
     <br>
@@ -15,7 +17,10 @@
             <button class="btn btn-secondary">Post</button>
         </form>
     </div>
-   
+{% else %} 
+
+<h2>You need to login first</h2>
+{% endif %}
     
 
 {% endblock content %}
