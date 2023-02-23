@@ -22,6 +22,7 @@ class Post(models.Model):
     # content = models.TextField()
     content = RichTextField(blank=True, null=True)
     date_posted = models.DateTimeField(auto_now_add = True)
+    likes = models.ManyToManyField(User, related_name='blog_posts')
     
 
     class Meta :

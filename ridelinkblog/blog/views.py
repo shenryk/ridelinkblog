@@ -19,6 +19,8 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/add_post.html'
+    success_url = reverse_lazy('home')
+    
     # fields = '__all__'
     # fields = {
     #     'title', 'content'
