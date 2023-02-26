@@ -1,5 +1,12 @@
 from django import forms
-from .models import Post
+from .models import Post , Contact
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ('name', 'email', 'phone_number', 'message')
+
 
 
 class PostForm(forms.ModelForm):

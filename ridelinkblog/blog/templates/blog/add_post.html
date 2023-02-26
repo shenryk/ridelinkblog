@@ -4,11 +4,15 @@
 {% endblock title %}
 
 {% block content %}
+<br/>
+<br/>
+<br/>
 
 {% if user.is_authenticated %}
-    <h1>Add your post Here</h1>
+    
     <div class ="container px-4 text-left">
         <div class="form-group">
+            <h2>Add your post Here</h2>
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.media }}

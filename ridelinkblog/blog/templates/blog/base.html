@@ -24,23 +24,6 @@
         <link href=" {% static 'style/styles.css' %}" rel="stylesheet" />
   </head>
   <body>
-    <header class="masthead" style="background-image: url( {% static 'images/Ridelink_Team.jpg' %})">
-      <div class="container position-relative px-4 px-lg-5">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                  <div class="site-heading">
-                      <h1>RideLink</h1>
-                      {% if user.is_authenticated %}
-                      <span class="subheading">Hello {{ user.first_name }}, you can Read our Stories Here</span>
-                      {% else %}
-                      <span class="subheading">Read our Stories Here</span>
-                      {% endif %}
-                  </div>
-              </div>
-          </div>
-      </div>
-    </header>
-
     {% include 'blog/navbar.html' %}
    
     
@@ -55,7 +38,7 @@
               <div class="col-md-10 col-lg-8 col-xl-7">
                   <ul class="list-inline text-center">
                       <li class="list-inline-item">
-                          <a href="#!">
+                          <a href="https://twitter.com/Ridelink_Inc?s=20!">
                               <span class="fa-stack fa-lg">
                                   <i class="fas fa-circle fa-stack-2x"></i>
                                   <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -71,10 +54,10 @@
                           </a>
                       </li>
                       <li class="list-inline-item">
-                          <a href="#!">
+                          <a href="https://www.linkedin.com/company/ridelinkltd">
                               <span class="fa-stack fa-lg">
                                   <i class="fas fa-circle fa-stack-2x"></i>
-                                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                               </span>
                           </a>
                       </li>
